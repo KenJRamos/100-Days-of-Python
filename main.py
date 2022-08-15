@@ -1,0 +1,5 @@
+print("Hello, trouble coming up with a band name?")
+print("Let me help")
+print(place := input("Where do you live?: "))
+print(pet := input("Name of your pet?: "))
+print(pet + place)
