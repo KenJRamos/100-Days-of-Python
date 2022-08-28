@@ -1,0 +1,70 @@
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+import random
+user_weapon = input('What do you choose? Type 0 for Rock, 1 for Paper, or 2 for Scissors. ')
+bot_choice = random.randint(1, 3)
+bot_weapon = None
+if bot_choice == 1:
+    bot_weapon = rock
+elif bot_choice == 2:
+    bot_weapon = paper
+else:
+    bot_weapon = scissors
+
+if user_weapon == 0:
+    print(rock)
+    if bot_weapon == 'rock':
+        print(rock)
+        print("Tie")
+    elif bot_weapon == 'paper':
+        print(paper)
+        print('You lose!')
+    else:
+        print(scissors)
+        print('You won!')
+elif user_weapon == 1:
+    print(paper)
+    if bot_weapon == 'rock':
+        print(rock)
+        print("You won!")
+    elif bot_weapon == 'paper':
+        print(paper)
+        print('Tie')
+    else:
+        print(scissors)
+        print('You Lose!')
+else:
+    print(scissors)
+    if bot_weapon == 'rock':
+        print(rock)
+        print("You lose!")
+    elif bot_weapon == 'paper':
+        print(paper)
+        print('You Won!')
+    else:
+        print(scissors)
+        print('Tie')
